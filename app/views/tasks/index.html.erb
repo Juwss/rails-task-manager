@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="text" id="header-index">
+    <h2>Your tasks are listed here :</h2>
+  </div>
+  <div class="text">
+    <ul>
+      <% @tasks.each do |task| %>
+        <li><%= link_to task.title, task_path(task)%></li>
+      <% end %>
+    </ul>
+  </div>
+  <div>
+    <p><%= link_to "Create a new task", new_path %></p>
+  </div>
+</div>
